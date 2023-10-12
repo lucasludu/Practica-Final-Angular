@@ -3,4 +3,13 @@
     Crear Usuario
 </button>
 
-{{userName}}
+<!-- {{ testUser | fullname : 'uppercase' }} -->
+<!-- {{ testUser | json }} -->
+
+<app-users-table 
+    [dataSource]="users" 
+    (editUser)="onEditUser($event)"
+    (deleteUser)="onDeleteUser($event)"
+></app-users-table>
+
+<!-- El $event representa lo que esta enviando el componente hijo. -->

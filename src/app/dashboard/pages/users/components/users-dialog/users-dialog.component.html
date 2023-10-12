@@ -1,13 +1,36 @@
-<h1 mat-dialog-title>Crear Usuario</h1>
+<h1 mat-dialog-title>
+    {{ (editUser) ? 'Editando Usuario' : 'Crear Usuario' }}
+</h1>
 <div mat-dialog-content>
 
     <!-- CONTENIDO -->
     <form [formGroup]="userForm">
         <div class="row">
-            <div class="col-12">
-                <mat-form-field>
+            <div class="col-6">
+                <mat-form-field class="w-100">
                     <mat-label>Nombre</mat-label>
                     <input formControlName="name" matInput/>
+                    <mat-error>
+                        {{ userForm.get('name')?.errors | formError }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field class="w-100">
+                    <mat-label>Apellido</mat-label>
+                    <input formControlName="lastName" matInput/>
+                    <mat-error>
+                        {{ userForm.get('lastName')?.errors | formError }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col-12">
+                <mat-form-field class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput/>
+                    <mat-error>
+                        {{ userForm.get('email')?.errors | formError }}
+                    </mat-error>
                 </mat-form-field>
             </div>
         </div>
@@ -18,6 +41,7 @@
 <div mat-dialog-actions>
 
     <button mat-dialog-close mat-button color="warn">Cancelar</button>
-    <button [mat-dialog-close]="userForm.get('name')?.value" mat-button color="primary">Guardar</button>
+    <button (click)="onSubmit()" mat-button color="primary">Guardar</button>
+    <!-- <button [mat-dialog-close]="userForm.get('name')?.value" mat-button color="primary">Guardar</button> -->
 
 </div>

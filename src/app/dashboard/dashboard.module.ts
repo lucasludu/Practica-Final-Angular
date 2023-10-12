@@ -15,7 +15,7 @@ import { UsersModule } from './pages/users/users.module';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
