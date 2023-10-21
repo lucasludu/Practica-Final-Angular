@@ -10,12 +10,20 @@ import { FormsModule as FormsPageModule } from './pages/forms/forms.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { UsersModule } from './pages/users/users.module';
+import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
+import { HomeModule } from './pages/home/home.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MatListModule } from '@angular/material/list';
 
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
+    ToolbarComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +34,11 @@ import { UsersModule } from './pages/users/users.module';
     FormsPageModule,
     MatToolbarModule,
     MatIconModule,
-    UsersModule
+    UsersModule,
+    TranslateModule,
+    SharedModule,
+    HomeModule,
+    MatListModule
   ]
   , exports: [
     DashboardComponent
