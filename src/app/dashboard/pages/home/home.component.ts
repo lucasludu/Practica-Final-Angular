@@ -64,7 +64,7 @@ export class HomeComponent implements OnDestroy {
       },
       // ERROR => CATCH
       error: (err) => {
-        alert('Ocurrio un error')
+        alert('Ocurrio un error'), console.log(err);
       },
       // COMPLETA => FINALLY
       complete: () => {
