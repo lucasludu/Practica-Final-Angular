@@ -1,5 +1,7 @@
 <!-- (click)="openUsersDialog()" -->
 
+<h1 [fontWeight]="'bolder'" appHeadline>Usuarios</h1>
+
 <button mat-flat-button color="primary">
   <mat-icon>add</mat-icon>
   Crear Usuario
@@ -17,3 +19,5 @@
 <app-users-table [dataSource]="(users | async) || []"></app-users-table>
 
 <!-- El $event representa lo que esta enviando el componente hijo. -->
+
+<!-- DEJE EN EL MINUTO 33 -->

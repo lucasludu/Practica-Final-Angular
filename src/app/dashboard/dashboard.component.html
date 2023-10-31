@@ -16,14 +16,16 @@
     <!-- <app-icons></app-icons> -->
     <main style="padding: 1rem;">
 
-      <button (click)="style === 'bolder' ? style = 'normal' : style = 'bolder'">Clickme!</button>
-      <h1 [fontWeight]="style" appHeadline>Usuarios</h1>
+      <!-- <button (click)="style === 'bolder' ? style = 'normal' : style = 'bolder'">Clickme!</button> -->
+      <!-- <h1 [fontWeight]="style" appHeadline>Usuarios</h1> -->
       <!-- <h1 fontWeight="bolder" appHeadline>Usuarios</h1> -->
 
       <!-- PAGINA -->
       <!-- <app-forms></app-forms> -->
-      <app-users></app-users>
+      <!-- <app-users></app-users> -->
 
+      <router-outlet></router-outlet>
+      
       <!-- <button (click)="showHome = !showHome">MOSTRAR HOME</button>
       <app-home *ngIf="showHome"></app-home> -->
 

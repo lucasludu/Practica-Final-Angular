@@ -1,8 +1,9 @@
 <mat-nav-list>
-    <mat-list-item [activated]="true">
+    <!-- /dashboard me llevará a /dashboard/home -->
+    <mat-list-item routerLink="home">
         <a>Home</a>
     </mat-list-item>
-    <mat-list-item>
+    <mat-list-item routerLink="users">
         <a>Usuarios</a>
     </mat-list-item>
     <mat-list-item>
